@@ -5,4 +5,24 @@
   "https://checkstyle.org/dtds/configuration_1_2.dtd">
  
 <module name="Checker">
+  <module name="TreeWalker">
+    <module name="NeedBraces"/>
+    <module name="BooleanExpressionComplexity"/>
+    <module name="CyclomaticComplexity">
+		<property name="max" value="29"/>
+	</module>
+    <module name="MethodLength"/>
+    <module name="EmptyCatchBlock"/>
+    <module name="AvoidStarImport"/>
+    <module name="IllegalImport"/>
+  </module>
+  <module name="LineLength"/>
+  <module name="FileLength"/>
+   <module name="FileTabCharacter">
+   <property name="eachLine" value="true"/>
+ </module>
+  <module name="Header">
+    <property name="headerFile" value="config/header.txt"/>
+    <property name="fileExtensions" value="java"/>
+  </module>
 </module>

@@ -5,12 +5,19 @@
 package it.unipd.mtss;
 public class RomanPrinter
 {
-    public static String print(int num)
-    {
-        return printAsciiArt(IntegerToRoman.convert(num));
+  public static String print(int num)
+  {
+    return printAsciiArt(IntegerToRoman.convert(num));
+  }
+  private static String costruisciRiga(String Matrix[][],int riga) {
+    String ret="";
+    for(int colonna=0;colonna<Matrix[riga].length;colonna++) {
+      ret+=Matrix[riga][colonna];
     }
-     private static String printAsciiArt(String romanNumber)
-    {
-        return "";
-    }
+    return ret;
+  }
+  private static String printAsciiArt(String romanNumber)
+  {
+    return "";
+  }
 }
